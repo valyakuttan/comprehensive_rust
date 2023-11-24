@@ -49,6 +49,7 @@ impl Bar {
     }
 }
 
+#[allow(dead_code)]
 pub fn main() {
     let bar = Bar(100);
 
