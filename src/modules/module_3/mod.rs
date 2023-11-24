@@ -8,7 +8,7 @@ mod lesson_19_exercises;
 pub fn main() {
     //lesson_15_memory_management::main();
     //lesson_16_ownership::main();
-    lesson_17_structs::main();
+    //lesson_17_structs::main();
     //lesson_18_methods::main();
-    //lesson_19_exercises::main();
+    lesson_19_exercises::main();
 }
