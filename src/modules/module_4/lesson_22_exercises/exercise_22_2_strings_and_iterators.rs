@@ -8,31 +8,49 @@
 /// prefixes can contain a wildcard character which matches a full
 /// segment.
 ///
-use std::iter::repeat;
 
 pub fn prefix_matches(prefix: &str, request_path: &str) -> bool {
-    let mut result = true;
+    let mut request_segments = request_path.split('/');
 
-    request_path
-        .split('/')
-        .map(|s| Some(s))
-        .chain(repeat(None))
-        .zip(prefix.split('/').map(|t| Some(t)))
-        .for_each(
-            |(request_segment, prefix_segment)| match (request_segment, prefix_segment) {
-                (Some(rs), Some(ps)) => {
-                    if rs != ps && ps != "*" {
-                        result = false;
-                    }
-                }
+    for prefix_segment in prefix.split('/') {
+        let Some(request_segment) = request_segments.next() else {
+            return false;
+        };
+        if request_segment != prefix_segment && prefix_segment != "*" {
+            return false;
+        }
+    }
+    true
 
-                (None, Some(_)) => result = false,
-
-                _ => {}
-            },
-        );
-
-    result
+    // Alternatively, Iterator::zip() lets us iterate simultaneously over prefix
+    // and request segments. The zip() iterator is finished as soon as one of
+    // the source iterators is finished, but we need to iterate over all request
+    // segments. A neat trick that makes zip() work is to use map() and chain()
+    // to produce an iterator that returns Some(str) for each pattern segments,
+    // and then returns None indefinitely.
+    //
+    // let mut result = true;
+    //
+    // request_path
+    //     .split('/')
+    //     .map(|s| Some(s))
+    //     .chain(std::iter::repeat(None))
+    //     .zip(prefix.split('/').map(|t| Some(t)))
+    //     .for_each(
+    //         |(request_segment, prefix_segment)| match (request_segment, prefix_segment) {
+    //             (Some(rs), Some(ps)) => {
+    //                 if rs != ps && ps != "*" {
+    //                     result = false;
+    //                 }
+    //             }
+    //
+    //             (None, Some(_)) => result = false,
+    //
+    //             _ => {}
+    //         },
+    //     );
+    //
+    // result
 }
 
 #[test]
