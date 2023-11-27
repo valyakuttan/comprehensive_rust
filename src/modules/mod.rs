@@ -5,7 +5,6 @@ mod module_4;
 mod module_5;
 mod module_6;
 mod module_7;
-mod module_8;
 
 #[allow(dead_code)]
 pub fn main() {
@@ -16,5 +15,4 @@ pub fn main() {
     module_5::main();
     module_6::main();
     module_7::main();
-    module_8::main()    
 }
