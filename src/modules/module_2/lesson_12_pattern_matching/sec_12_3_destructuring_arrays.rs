@@ -14,9 +14,9 @@
 fn inspect(slice: &[i32]) {
     print!("Tell me about {slice:?}: ");
     match slice {
-        &[0, y, z] => println!("First is 0, y = {y}, and z = {z}"),
-        &[1, ..]   => println!("First is 1 and the rest were ignored"),
-        &[.., b] => println!("Last element is {b}"),
+        [0, y, z] => println!("First is 0, y = {y}, and z = {z}"),
+        [1, ..]   => println!("First is 1 and the rest were ignored"),
+        [.., b] => println!("Last element is {b}"),
         _          => println!("All elements were ignored"),
     }
 }

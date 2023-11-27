@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
+
 /// # `if` expression
 /// 
 /// you can use `if` as an expression. The last expression of each block

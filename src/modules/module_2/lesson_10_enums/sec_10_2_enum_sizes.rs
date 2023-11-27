@@ -1,3 +1,8 @@
+#![allow(
+    dead_code,
+    clippy::needless_doctest_main,
+)]
+
 /// # Enum Sizes
 /// 
 /// Rust enums are packed tightly, taking constraints due to

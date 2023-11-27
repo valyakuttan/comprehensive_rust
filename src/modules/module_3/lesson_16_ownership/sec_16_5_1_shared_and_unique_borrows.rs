@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Shared and Unique Borrows
 ///
 /// Rust puts constraints on the ways you can borrow values:

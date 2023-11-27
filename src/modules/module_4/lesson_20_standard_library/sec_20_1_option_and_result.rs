@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Option and Result
 ///
 /// These types represent optional data:

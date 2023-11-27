@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::boxed_local)]
+
 /// # Storing Books
 ///
 /// Use the code below to learn about `Vec<T>` API, and
@@ -159,21 +161,19 @@ fn test_library_oldest_book() {
 #[test]
 fn test_add_book() {
     let mut library = Library::new();
-    assert_eq!(library.is_empty(), true);
+    assert!(library.is_empty());
 
     library.add_book(Book::new("Lord of the Rings", 1954));
-    assert_eq!(library.is_empty(), false);
     assert_eq!(library.len(), 1);
 
     library.add_book(Book::new("Alice's Adventures in Wonderland", 1865));
-    assert_eq!(library.is_empty(), false);
     assert_eq!(library.len(), 2);
 }
 
 #[test]
 fn test_oldest_book() {
     let mut library = Library::new();
-    assert_eq!(library.oldest_book().is_none(), true);
+    assert!(library.oldest_book().is_none());
 
     library.add_book(Book::new("Lord of the Rings", 1954));
     match library.oldest_book() {
@@ -183,7 +183,7 @@ fn test_oldest_book() {
         }
 
         _ => {
-            assert!(false);
+            unreachable!()
         }
     }
 
@@ -195,7 +195,7 @@ fn test_oldest_book() {
         }
 
         _ => {
-            assert!(false);
+            unreachable!()
         }
     }
 }

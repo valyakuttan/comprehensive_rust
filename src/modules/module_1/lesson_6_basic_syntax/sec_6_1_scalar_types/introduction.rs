@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Scalar Types
 /// 
 /// | Type name              | Type variants                  | Literals               |

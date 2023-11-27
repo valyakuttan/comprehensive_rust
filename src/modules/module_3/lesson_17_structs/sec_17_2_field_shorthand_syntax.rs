@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Field Shorthand Syntax
 ///
 /// If you already have variables with the right names,

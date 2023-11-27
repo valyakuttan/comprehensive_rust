@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # References
 ///
 /// Like C++, Rust has references:

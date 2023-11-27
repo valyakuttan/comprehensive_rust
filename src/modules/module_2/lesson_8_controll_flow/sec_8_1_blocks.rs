@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
+
 /// # Blocks
 /// A block in Rust contains a sequence of expressions. Each
 /// block has a value and a type, which are those of the
@@ -36,5 +38,4 @@
 /// }
 /// ```
 
-#[allow(dead_code)]
 pub fn main() {}

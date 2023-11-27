@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Niche Optimization
 /// 
 /// A `Box` cannot be empty, so the pointer is always valid and non-null.
@@ -14,7 +16,7 @@
 /// fn main() {
 ///     let list: List<i32> = List::Cons(1, Box::new(List::Cons(2, Box::new(List::Nil))));
 ///     println!("{list:?}");
-////}
+///}
 /// 
 /// ```
 /// 

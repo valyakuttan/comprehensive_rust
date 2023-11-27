@@ -1,3 +1,8 @@
+#![allow(
+    dead_code,
+    clippy::needless_doctest_main,
+)]
+
 /// # Stack And Heap Example
 /// 
 /// Creating a String puts fixed-sized metadata on the stack and

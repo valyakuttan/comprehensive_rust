@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
+
 /// # Arrays and for Loops
 ///
 /// An array can be declared as:

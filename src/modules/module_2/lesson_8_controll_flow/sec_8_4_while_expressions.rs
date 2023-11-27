@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
+
 /// # while loops
 /// 
 /// The `while` keyword works very similar to other languages:

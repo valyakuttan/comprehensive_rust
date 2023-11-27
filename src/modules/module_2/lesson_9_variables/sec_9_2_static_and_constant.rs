@@ -44,6 +44,7 @@
 /// const fn foo() -> i16 {
 ///    123
 /// }
+/// 
 /// ```
 ///
 /// ## static
@@ -70,7 +71,7 @@
 /// |                                              |                                   |              |
 /// | Can be mutable                               | Yes (unsafe)                      | No           |
 /// |                                              |                                   |              |
-/// | Evaluated at compile time	                   | Yes (initialised at compile time) | Yes          |
+/// | Evaluated at compile time                  | Yes (initialised at compile time) | Yes          |
 /// |                                              |                                   |              |
 /// | Inlined wherever it is used                  | No                                | Yes          |
 /// |                                              |                                   |              |

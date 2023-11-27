@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Tuple Structs
 ///
 /// If the field names are unimportant, you can use a tuple struct:
@@ -33,14 +35,13 @@
 ///
 /// - Newtypes are a great way to encode additional information about the value
 ///   in a primitive type, for example:
-/// 
+///
 ///   - The number is measured in some units: `Newtons` in the example above.
-/// 
+///
 ///   - The value passed some validation when it was created, so you no longer
 ///     have to validate it again at every use: `PhoneNumber(String)` or
 ///     `OddNumber(u32)`.
-/// 
-
+///
 use std::convert::From;
 
 const POUNDS_TO_NEWTONS: f64 = 4.44822162;
@@ -57,7 +58,7 @@ fn compute_thruster_force() -> PoundsOfForce {
 }
 
 fn set_thruster_force(force: Newtons) {
-    assert_eq!(force.0 > 0.0, true);
+    assert!(force.0 > 0.0);
 }
 
 #[allow(dead_code)]

@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
+
 /// # for loops
 ///
 /// The `for` loop is closely related to the `while let` loop.

@@ -1,3 +1,9 @@
+#![allow(
+    dead_code,
+    clippy::needless_doctest_main,
+    clippy::while_let_on_iterator,
+)]
+
 /// # `while let` loops
 /// 
 /// Like with `if let`, there is a `while let` variant which

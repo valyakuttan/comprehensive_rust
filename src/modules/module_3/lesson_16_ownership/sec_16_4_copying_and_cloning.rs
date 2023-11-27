@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Copying and Cloning
 ///
 /// While move semantics are the default, certain types

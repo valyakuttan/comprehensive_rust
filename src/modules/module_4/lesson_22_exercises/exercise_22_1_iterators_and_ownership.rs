@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main)]
+
 /// # Iterators and Ownership
 ///
 /// The ownership model of Rust affects many APIs. An example of this

@@ -1,3 +1,11 @@
+#![allow(
+    dead_code,
+    clippy::needless_doctest_main,
+    clippy::needless_range_loop,
+    clippy::while_let_on_iterator,
+    clippy::vec_init_then_push
+)]
+
 use std::collections::HashSet;
 
 /// # Type Inference
@@ -56,5 +64,4 @@ pub fn main() {
 
     let doubled = a.iter().map(|x| x * 2).collect::<Vec<_>>();
     assert_eq!(vec![2, 4, 6], doubled);
-
 }

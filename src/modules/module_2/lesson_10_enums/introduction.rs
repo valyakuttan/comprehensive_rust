@@ -35,9 +35,9 @@ enum CoinFlip {
 fn flip_coin() -> CoinFlip {
     let random_number = generate_random_number();
     if random_number % 2 == 0 {
-        return CoinFlip::Heads;
+        CoinFlip::Heads
     } else {
-        return CoinFlip::Tails;
+        CoinFlip::Tails
     }
 }
 

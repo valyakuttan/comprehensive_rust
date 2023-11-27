@@ -1,3 +1,11 @@
+#![allow(
+    dead_code,
+    clippy::needless_doctest_main,
+    clippy::needless_range_loop,
+    clippy::while_let_on_iterator,
+    clippy::vec_init_then_push
+)]
+
 /// # Scopes and Shadowing
 /// 
 /// You can shadow variables, both those from outer scopes and

@@ -1,9 +1,16 @@
+#![allow(
+    dead_code,
+    clippy::needless_doctest_main,
+    clippy::needless_range_loop,
+    clippy::while_let_on_iterator
+)]
+
 /// # break and continue
-/// 
+///
 /// - If you want to exit a loop early, use `break`,
-/// 
+///
 /// - If you want to immediately start the next iteration use `continue`.
-/// 
+///
 /// - Both `continue` and `break` can optionally take a label argument
 ///   which is used to break out of nested loops:
 
@@ -23,4 +30,3 @@ pub fn main() {
         }
     }
 }
-

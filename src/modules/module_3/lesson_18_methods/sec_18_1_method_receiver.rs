@@ -1,3 +1,5 @@
+#![allow(dead_code, clippy::needless_doctest_main, clippy::boxed_local)]
+
 /// # Method Receiver
 ///
 /// The `&self` indicates that the method borrows the object immutably.
@@ -56,8 +58,8 @@ pub fn main() {
     bar.reference();
     bar.consuming(); // bar is moved
 
-    let mut baz = Bar(100);
-    baz.mut_reference();
+    let mut _baz = Bar(100);
+    _baz.mut_reference();
 
     Box::new(Bar(50)).boxed();
 

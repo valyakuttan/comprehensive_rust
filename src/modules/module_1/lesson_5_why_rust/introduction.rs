@@ -1,4 +1,6 @@
-//// # Modern Features
+#![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
+
+/// # Modern Features
 /// 
 /// Rust is built with all the experience gained in the last decades.
 /// 
@@ -17,6 +19,7 @@
 /// - The Rust compiler is significantly more talkative than other compilers. It
 ///   will often provide you with actionable feedback, ready to copy-paste into your code.
 /// 
+
 pub fn main() { // Program entry point
     let mut x: i32 = 6; // Mutable variable binding
     print!("{x}"); // Macro for printing, like printf
@@ -24,7 +27,7 @@ pub fn main() { // Program entry point
         // No parenthesis around expression
         if x % 2 == 0 {
             // Math like in other languages
-            x = x / 2;
+            x /= 2;
         } else {
             x = 3 * x + 1;
         }
