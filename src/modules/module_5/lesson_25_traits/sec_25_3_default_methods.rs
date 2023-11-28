@@ -10,7 +10,10 @@ trait NotEquals {
     fn not_equals(&self, other: &Self) -> bool;
 }
 
-impl<T> NotEquals for T where T: Equals {
+impl<T> NotEquals for T
+where
+    T: Equals,
+{
     fn not_equals(&self, other: &Self) -> bool {
         !self.equals(other)
     }

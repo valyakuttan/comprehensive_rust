@@ -20,7 +20,7 @@ pub fn main() {
 
     for s in list.iter_mut() {
         println!("{s}");
-    } 
+    }
 }
 
 pub struct List<T> {

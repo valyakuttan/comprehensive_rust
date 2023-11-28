@@ -17,7 +17,6 @@
 
 #[allow(dead_code)]
 pub fn main() {
-
     // if let
     let arg = std::env::args().next();
     if let Some(value) = arg {

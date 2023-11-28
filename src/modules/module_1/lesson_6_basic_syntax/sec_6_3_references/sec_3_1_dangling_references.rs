@@ -1,9 +1,9 @@
 /// # Dangling References
-/// 
+///
 /// Rust will statically forbid dangling references:
-/// 
+///
 /// - A reference is said to “borrow” the value it refers to.
-/// 
+///
 /// - Rust is tracking the lifetimes of all references to ensure
 ///   they live long enough.
 ///

@@ -1,6 +1,5 @@
-
 /// # Generic Methods
-/// 
+///
 /// You can declare a generic type on your `impl` block:
 ///
 

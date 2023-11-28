@@ -15,9 +15,9 @@
 ///     let text = String::from("The quick brown fox jumps over the lazy dog.");
 ///     let fox = Highlight(&text[4..19]);
 ///     let dog = Highlight(&text[35..43]);
-/// 
+///
 ///     // erase(text); // error: cannot move out of `text` because it is borrowed
-/// 
+///
 ///     println!("{fox:?}");
 ///     println!("{dog:?}");
 /// }

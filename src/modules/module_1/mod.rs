@@ -5,6 +5,5 @@ mod lesson_7_exercises;
 
 #[allow(dead_code)]
 pub fn main() {
-  
     lesson_7_exercises::main();
 }

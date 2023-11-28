@@ -102,7 +102,7 @@ mod test {
 
         assert_eq!(list.peek(), Some(&3));
         assert_eq!(list.peek_mut(), Some(&mut 3));
-        
+
         if let Some(value) = list.peek_mut() {
             *value = 42
         };

@@ -1,9 +1,9 @@
 #![allow(dead_code, clippy::needless_doctest_main, clippy::needless_range_loop)]
 
 /// # while loops
-/// 
+///
 /// The `while` keyword works very similar to other languages:
-/// 
+///
 /// ```
 /// fn main() {
 ///     let mut x = 10;
@@ -17,7 +17,7 @@
 ///     println!("x: {x}");
 /// }
 /// ```
-/// 
+///
 
 #[allow(dead_code)]
 pub fn main() {}

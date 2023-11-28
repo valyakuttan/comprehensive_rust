@@ -73,5 +73,8 @@ pub fn main() {
         std::mem::size_of::<&Cat>()
     );
     println!("Size of &dyn Pet: {}", std::mem::size_of::<&dyn Pet>());
-    println!("Size of Box<&dyn Pet>: {}", std::mem::size_of::<Box<dyn Pet>>());
+    println!(
+        "Size of Box<&dyn Pet>: {}",
+        std::mem::size_of::<Box<dyn Pet>>()
+    );
 }

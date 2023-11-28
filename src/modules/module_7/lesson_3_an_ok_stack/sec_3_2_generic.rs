@@ -1,11 +1,11 @@
 #![allow(dead_code)]
 
 /// # 3.2 Making it all Generic
-/// 
+///
 /// Let's make all of our types generic right now:
-/// 
+///
 /// ```
-/// 
+///
 /// pub struct List<T> {
 ///     head: Link<T>,
 /// }
@@ -16,8 +16,8 @@
 ///     elem: T,
 ///     next: Link<T>,
 /// }
-/// 
-/// 
+///
+///
 /// impl<T> List<T> {
 ///     pub fn new() -> Self {
 ///         List { head: None }
@@ -50,6 +50,6 @@
 /// }
 ///
 /// ```
-/// 
+///
 
 pub fn main() {}

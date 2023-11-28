@@ -1,12 +1,12 @@
 /// # Example
 ///
-/// 
+///
 /// Although the method receivers are different, the non-static functions
 /// are called the same way in the `main` body. Rust enables automatic
 /// referencing and dereferencing when calling methods. Rust automatically
 /// adds in the `&`, `*`, `mut` so that that object matches the method
 /// signature.
-/// 
+///
 
 #[derive(Debug)]
 struct Race {

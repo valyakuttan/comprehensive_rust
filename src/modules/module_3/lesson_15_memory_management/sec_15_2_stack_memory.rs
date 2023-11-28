@@ -1,13 +1,10 @@
-#![allow(
-    dead_code,
-    clippy::needless_doctest_main,
-)]
+#![allow(dead_code, clippy::needless_doctest_main)]
 
 /// # Stack And Heap Example
-/// 
+///
 /// Creating a String puts fixed-sized metadata on the stack and
 /// dynamically sized data, the actual string, on the heap:
-/// 
+///
 /// ```
 /// fn main() {
 ///     let s1 = String::from("Hello");
@@ -27,12 +24,12 @@
 /// |                          |               |                                       |
 /// |                          |               |                                       |
 ///  --------------------------                 ---------------------------------------
-/// 
+///
 /// - A `String` is backed by a `Vec`, so it has a capacity and length and can grow if
 ///   mutable via reallocation on the heap.
-/// 
+///
 /// We can inspect the memory layout with `unsafe` Rust.
-/// 
+///
 
 #[allow(dead_code)]
 pub fn main() {
@@ -47,4 +44,3 @@ pub fn main() {
         println!("ptr = {ptr:#x}, len = {len}, capacity = {capacity}");
     }
 }
-

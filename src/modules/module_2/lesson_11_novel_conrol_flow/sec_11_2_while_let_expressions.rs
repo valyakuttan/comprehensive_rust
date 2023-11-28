@@ -1,19 +1,19 @@
 #![allow(
     dead_code,
     clippy::needless_doctest_main,
-    clippy::while_let_on_iterator,
+    clippy::while_let_on_iterator
 )]
 
 /// # `while let` loops
-/// 
+///
 /// Like with `if let`, there is a `while let` variant which
 /// repeatedly tests a value against a pattern:
-/// 
+///
 /// In the code below the iterator returned by `v.into_iter()` will return a
 /// `Option<i32>` on every call to `next()`. It returns `Some(x)` until it is
 /// done, after which it will return `None`. The `while let` lets us keep
 /// iterating through all items.
-/// 
+///
 
 #[allow(dead_code)]
 pub fn main() {

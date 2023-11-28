@@ -1,7 +1,7 @@
 /// # Destructuring Structs
-/// 
+///
 /// You can also destructure structs:
-/// 
+///
 
 struct Foo {
     x: (u32, u32),

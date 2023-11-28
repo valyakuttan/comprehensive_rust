@@ -20,7 +20,7 @@
 ///
 ///
 /// ```
-/// 
+///
 /// use std::mem;
 ///
 /// pub struct List {
@@ -70,30 +70,30 @@
 /// }
 ///
 /// ```
-/// 
+///
 /// - First `mem::replace(&mut option, None)`is such an incredibly common idiom that
 ///   `Option` actually just went ahead and made it a method: `take`.
-/// 
+///
 /// - Second, `match option { None => None, Some(x) => Some(y) }` is such an incredibly
 ///   common idiom that it was called `map`. `map` takes a function to execute on the
 ///   `x` in the `Some(x)` to produce the `y` in `Some(y)`. We could write a proper fn
 ///   and pass it to map, but we'd much rather write what to do inline.
-/// 
+///
 /// - The way to do this is with a closure. Closures are anonymous functions with an
 ///   extra super-power: they can refer to local variables outside the closure! This
 ///   makes them super useful for doing all sorts of conditional logic. The only place
 ///   we do a `match` is in pop, so let's just rewrite that:
-/// 
+///
 /// ```
-/// 
+///
 /// pub fn pop(&mut self) -> Option<i32> {
 ///     self.head.take().map(|node| {
 ///         self.head = node.next;
 ///         node.elem
 ///     })
 /// }
-/// 
+///
 /// ```
-/// 
+///
 
 pub fn main() {}

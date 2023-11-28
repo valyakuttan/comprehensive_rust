@@ -1,8 +1,8 @@
 /// # Variables
-/// 
+///
 /// Rust provides type safety via static typing.
 /// Variable bindings are immutable by default:
-/// 
+///
 
 #[allow(dead_code)]
 pub fn main() {

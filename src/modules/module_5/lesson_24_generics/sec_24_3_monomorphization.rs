@@ -1,21 +1,21 @@
 #![allow(dead_code, clippy::needless_doctest_main)]
 
 /// # Monomorphization
-/// 
+///
 /// Generic code is turned into non-generic code based
 /// on the call sites:
-/// 
+///
 /// ```
 ///
 /// fn main() {
 ///     let integer = Some(5);
 ///     let float = Some(5.0);
 /// }
-/// 
+///
 /// ```
-/// 
+///
 /// behaves as if you wrote
-/// 
+///
 /// ```
 ///
 /// enum Option_i32 {
@@ -32,11 +32,11 @@
 ///     let integer = Option_i32::Some(5);
 ///     let float = Option_f64::Some(5.0);
 /// }
-/// 
+///
 /// ```
 ///
 /// This is a zero-cost abstraction: you get exactly the same result as
 /// if you had hand-coded the data structures without the abstraction.
-/// 
+///
 
 pub fn main() {}

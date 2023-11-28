@@ -60,45 +60,43 @@
 /// ```
 ///
 /// Which gives the errors
-/// 
+///
 /// ```
-/// 
+///
 /// error[E0596]: cannot borrow `self.head` as mutable,
 /// as it is behind a `&` reference
 /// ....
-/// 
+///
 /// error[E0507]: cannot move out of borrowed content
 /// ````
-/// 
+///
 /// For the first error you can't upgrade a shared reference to a mutable
 /// one, so `iter_mut` needs to take `&mut self`.
-/// 
+///
 /// ## Move semantics and Copy types
-/// 
+///
 /// In the **ownership** model `Copy` types are known to be perfectly
 /// copyable by a bitwise copy. As such, they have a super power: when
 /// moved, the old value is still usable. As a consequence, you can even
 /// move a `Copy` type out of a reference without replacement.
-/// 
+///
 /// Shared references are also Copy! Because `&` is copy, `Option<&>` is
 /// also Copy. So when we did `self.next.map` it was fine because the
 /// `Option` was just copied. Now we can't do that, because `&mut` isn't
 /// Copy (if you copied an `&mut`, you'd have two `&mut`'s to the same
 /// location in memory, which is forbidden). Instead, we should properly
 /// `take` the `Option` to get it.
-/// 
+///
 /// ```
-/// 
+///
 /// fn next(&mut self) -> Option<Self::Item> {
 ///     self.next.take().map(|node| {
 ///         self.next = node.next.as_deref_mut();
 ///         &mut node.elem
 ///     })
 /// }
-/// 
+///
 /// ```
-
-
 
 pub struct IterMut<'a, T> {
     next: Option<&'a mut Node<T>>,

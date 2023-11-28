@@ -1,4 +1,3 @@
-
 mod introduction;
 mod sec_21_1_visibility;
 mod sec_21_2_paths;

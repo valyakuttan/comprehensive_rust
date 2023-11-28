@@ -130,7 +130,6 @@ fn test_error() {
 
 #[allow(dead_code)]
 pub fn main() {
-
     let result = eval(Expression::Op {
         op: Operation::Add,
         left: Box::new(Expression::Value(10)),

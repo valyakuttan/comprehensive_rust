@@ -57,11 +57,10 @@
 /// }
 ///
 /// ```
-/// 
+///
 /// Here we replace `self.head` temporarily with `Link::Empty` before
-/// replacing it with the new head of the list. 
+/// replacing it with the new head of the list.
 ///  
-
 use std::mem;
 
 pub struct List {
@@ -101,7 +100,6 @@ impl List {
             }
         }
     }
-    
 }
 
 pub fn main() {}

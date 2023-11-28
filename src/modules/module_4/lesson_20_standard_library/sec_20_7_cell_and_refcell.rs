@@ -10,8 +10,7 @@
 ///
 /// - To do anything with a `Node`, you must call a `RefCell` method, usually
 ///   `borrow` or `borrow_mut`.
-/// 
-
+///
 use std::cell::RefCell;
 use std::rc::Rc;
 

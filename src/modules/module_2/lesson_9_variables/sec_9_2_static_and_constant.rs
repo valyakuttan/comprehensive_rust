@@ -44,25 +44,25 @@
 /// const fn foo() -> i16 {
 ///    123
 /// }
-/// 
+///
 /// ```
 ///
 /// ## static
-/// 
+///
 /// Static variables will live during the whole execution of the program,
 /// and therefore will not move. Static variables are not inlined upon use
 /// and have an actual associated memory location. This is useful for unsafe
 /// and embedded code, and the variable lives through the entirety of the
 /// program execution. When a globally-scoped value does not have a reason to
 /// need object identity, `const` is generally preferred.
-/// 
+///
 /// Because `static` variables are accessible from any thread, they must be `Sync`.
 /// Interior mutability is possible through a `Mutex`, atomic or similar. It is
 /// also possible to have mutable statics, but they require manual synchronisation
 /// so any access to them requires `unsafe` code.
-/// 
+///
 /// Properties table:
-/// 
+///
 /// | Property                                     | `static`                          | `const`      |
 /// | ============================================ | ================================= | ============ |
 /// | Has an address in memory                     | Yes                               | No (inlined) |
@@ -77,8 +77,6 @@
 /// |                                              |                                   |              |
 ///
 ///
- 
-#[allow(dead_code)]
-pub fn main() {
 
-}
+#[allow(dead_code)]
+pub fn main() {}

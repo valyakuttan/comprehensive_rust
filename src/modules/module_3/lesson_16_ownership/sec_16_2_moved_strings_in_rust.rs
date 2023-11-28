@@ -1,12 +1,12 @@
 /// # Moved Strings in Rust
-/// 
+///
 /// - The heap data from `s1` is reused for `s2`.
-/// 
+///
 /// - When `s1` goes out of scope, nothing happens
 ///   (it has been moved from).
 ///
-/// 
-/// Before move to `s2`: 
+///
+/// Before move to `s2`:
 ///
 ///              Stack                                             Heap
 ///  --------------------------                 ---------------------------------------
@@ -22,7 +22,7 @@
 /// |                          |               |                                       |
 ///  --------------------------                 ---------------------------------------
 ///
-/// 
+///
 /// After move to `s2`:
 ///
 ///              Stack                                             Heap
@@ -42,16 +42,15 @@
 /// |     | len      |  5 |    |               |                                       |
 /// |     | capacity |  5 |    |               |                                       |
 /// |     |          |    |    |               |                                       |
-/// |      ---------------     |               |                                       | 
+/// |      ---------------     |               |                                       |
 /// |                          |               |                                       |
 ///  --------------------------                 ---------------------------------------
 ///  
-
 
 #[allow(dead_code)]
 pub fn main() {
     let s1: String = String::from("Rust");
     let s2: String = s1;
-    
+
     assert_eq!(s2, String::from("Rust"));
 }

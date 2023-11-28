@@ -4,7 +4,7 @@
 /// A block in Rust contains a sequence of expressions. Each
 /// block has a value and a type, which are those of the
 /// last expression of the block:
-/// 
+///
 /// ```
 /// fn main() {
 ///     let x = {
@@ -23,11 +23,11 @@
 ///     println!("x: {x}");
 ///  }
 /// ```
-/// 
+///
 /// If the last expression ends with ;, then the resulting value and type is `()`.
 /// The same rule is used for functions: the value of the function body is
 /// the return value:
-/// 
+///
 /// ```
 /// fn double(x: i32) -> i32 {
 ///     x + x

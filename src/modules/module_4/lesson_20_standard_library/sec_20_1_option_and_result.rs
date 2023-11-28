@@ -29,14 +29,14 @@
 ///   - Otherwise, `Result::Err` is returned with the original vector.
 ///
 /// ## The question mark operator, `?`
-/// 
+///
 /// The question mark operator, `?`, hides some of the boilerplate of
 /// propagating values up the call stack.
-/// 
-/// 
+///
+///
 /// It replaces the code below:
 /// ```
-/// 
+///
 /// fn add_last_numbers(stack: &mut Vec<i32>) -> Option<i32> {
 ///     let a = stack.pop();
 ///     let b = stack.pop();
@@ -48,24 +48,24 @@
 /// }
 ///
 /// ```
-/// 
+///
 /// With this:
-/// 
+///
 /// ```
-/// 
+///
 /// fn add_last_numbers(stack: &mut Vec<i32>) -> Option<i32> {
 ///     Some(stack.pop()? + stack.pop()?)
 /// }
-/// 
+///
 /// ```
-/// 
+///
 /// - Ending the expression with `?` will result in the `Some`’s unwrapped value,
 ///   unless the result is `None`, in which case `None` is returned early from
 ///   the enclosing function.
-/// 
+///
 /// - `?` can be used in functions that return `Option` because of the early return
 ///   of `None` that it provides.
-/// 
+///
 
 #[allow(dead_code)]
 pub fn main() {
