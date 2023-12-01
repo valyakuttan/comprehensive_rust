@@ -1,7 +1,9 @@
+mod days;
 mod modules;
 mod playground;
 
 fn main() {
-    modules::main();
+    days::main();
     playground::main();
+    modules::main();
 }
