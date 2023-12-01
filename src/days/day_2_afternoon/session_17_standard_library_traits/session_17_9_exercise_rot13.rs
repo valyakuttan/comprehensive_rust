@@ -9,7 +9,7 @@ use std::io::Read;
 /// still valid UTF-8.
 ///
 
-struct RotDecoder<R: Read> {
+struct RotDecoder<R> {
     input: R,
     rot: u8,
 }
