@@ -197,7 +197,6 @@ fn parse_field(data: &[u8]) -> Result<(Field, &[u8]), Error> {
         },
         remainder,
     ))
-
 }
 
 /// Parse a message in the given data, calling `field_callback` for each field in the message.

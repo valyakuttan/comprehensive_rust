@@ -4,7 +4,7 @@
 /// with a lifetime:
 ///
 /// ```
-/// 
+///
 /// #[derive(Debug)]
 /// struct Highlight<'doc>(&'doc str);
 ///
@@ -22,7 +22,7 @@
 ///     println!("{fox:?}");
 ///     println!("{dog:?}");
 /// }
-/// 
+///
 /// ```
 ///
 /// - In the above example, the annotation on `Highlight` enforces that the
@@ -63,4 +63,3 @@ pub fn main() {
     println!("{fox:?}");
     println!("{dog:?}");
 }
-

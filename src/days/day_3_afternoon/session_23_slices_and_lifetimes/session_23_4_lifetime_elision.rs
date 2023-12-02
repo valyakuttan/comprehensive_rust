@@ -14,18 +14,18 @@
 ///   `self`, that lifetime is given to all un-annotated return values.
 ///
 /// In this example, `cab_distance` is trivially elided.
-/// 
+///
 /// The `nearest` function provides another example of a function with
 /// multiple references in its arguments that requires explicit annotation.
-/// 
-/// If we change the signature to 
-/// 
+///
+/// If we change the signature to
+///
 /// ```
-/// 
+///
 /// fn nearest<'a>(points: &'a [Point], query: &'q Point) -> Option<&'q Point> {
-/// 
+///
 /// ```
-/// 
+///
 /// This won’t compile, demonstrating that the annotations are checked for
 /// validity by the compiler. Note that this is not the case for raw pointers
 /// (unsafe), and this is a common source of errors with unsafe Rust.
