@@ -80,7 +80,7 @@
 ///    let a = a + 1;
 ///    println!("{a} {b}");
 /// }
-/// ``
+/// ```
 
 pub fn main() {
     let a = 10;
