@@ -12,8 +12,17 @@ use std::cmp::Ordering;
 /// order.
 ///
 
+impl<'a, T: Ord + Copy> Iterator for BTIter<'a, T> {
+    type Item = T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        None
+    }
+}
+struct BTIter<'a, T>(&'a BinaryTree<T>);
+
 #[derive(Debug)]
-struct BinaryTreeNode<T: Ord + Copy> {
+struct BinaryTreeNode<T> {
     value: T,
     left: BinaryTree<T>,
     right: BinaryTree<T>,
@@ -26,13 +35,17 @@ struct BinaryTreeNode<T: Ord + Copy> {
 type TreeNode<T> = Box<BinaryTreeNode<T>>;
 
 #[derive(Debug)]
-pub struct BinaryTree<T: Ord + Copy>(Option<TreeNode<T>>);
+pub struct BinaryTree<T>(Option<TreeNode<T>>);
 
 // Implement `new`, `insert`, and `has`.
 
 impl<T: Ord + Copy> BinaryTree<T> {
     fn new() -> Self {
         Self(None)
+    }
+
+    fn iter(&self) -> BTIter<T> {
+        BTIter(self)
     }
 
     fn has(&self, value: T) -> bool {
