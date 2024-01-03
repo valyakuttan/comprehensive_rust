@@ -25,12 +25,12 @@
 /// Rust has built-in support for documentation tests:
 ///
 /// - Code blocks in /// comments are automatically seen as Rust code.
-/// 
+///
 /// - The code will be compiled and executed as part of `cargo test`.
-/// 
+///
 /// - Adding # in the code will hide it from the docs, but will still
 ///   compile/run it
-/// 
+///
 
 /// Shortens a string to the given length.
 ///

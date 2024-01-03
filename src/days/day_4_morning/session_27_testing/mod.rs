@@ -7,4 +7,3 @@ mod session_27_7_exercise_luhn_algorithm;
 pub fn main() {
     session_27_7_exercise_luhn_algorithm::main();
 }
-

@@ -38,39 +38,38 @@
 /// pub fn harvest(garden: &mut Garden) { todo!() }
 ///
 /// ```
-/// 
+///
 /// - Before Rust 2018, modules needed to be located at module/mod.rs instead
 ///   of `module.rs`, and this is still a working alternative for editions
 ///   after 2018.
-/// 
+///
 /// - The main reason to introduce `filename.rs` as alternative to
 ///   `filename/mod.rs` was because many files named `mod.rs` can be hard
 ///   to distinguish in IDEs.
-/// 
+///
 /// Deeper nesting can use folders, even if the main module is a file:
-/// 
+///
 /// ```
-/// 
+///
 /// src/
 /// ├── main.rs
 /// ├── top_module.rs
 /// └── top_module/
 ///     └── sub_module.rs
-/// 
+///
 /// ```
-/// 
+///
 /// The place rust will look for modules can be changed with a compiler directive:
-/// 
+///
 /// ```
-/// 
+///
 /// #[path = "some/path.rs"]
 /// mod some_module;
-/// 
+///
 /// ```
-/// 
+///
 /// This is useful, for example, if you would like to place tests for a module
 /// in a file named `some_module_test.rs`, similar to the convention in Go.
-/// 
-
+///
 
 pub fn main() {}
